@@ -1,0 +1,13 @@
+def leap_year(year):
+    """Leap year function
+    Inputs:
+        year (int) : The current year to test
+
+    Returns: 
+        bool : if the year is leap return true else return false
+    """
+    divisible_by_4 = year % 4 == 0
+    divisible_by_100 = year % 100 == 0
+    divisible_by_400 = year % 400 == 0
+    return (divisible_by_4 and not divisible_by_100) or (divisible_by_100 and divisible_by_400)
+    
